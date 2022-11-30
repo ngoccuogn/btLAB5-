@@ -1,0 +1,15 @@
+﻿create proc sp_hello
+   @Ten nvarchar(30)
+as
+begin
+   print 'Hello' +@Ten;
+end;
+
+alter proc sp_hello
+    @Ten nvarchar(30)
+as 
+begin
+  print ' Hello ' +@Ten;
+end;
+
+  exec sp_hello N'Bảo';

@@ -1,0 +1,8 @@
+create proc sp_timNVTheoMa
+      @MaNV nvarchar(9)
+as
+begin
+   select * from NHANVIEN where MANV = @MaNV;
+end;
+
+exec sp_timNVTheoMa'004';

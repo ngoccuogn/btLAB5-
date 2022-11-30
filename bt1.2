@@ -1,0 +1,12 @@
+﻿create proc sp_sum
+   @s1 int, @s2 int
+as
+begin
+  declare @tg int;
+
+  set @tg = @s1 + @s2;
+
+  print N'Tổng là : ' + cast (@tg as varchar);
+end;
+
+exec sp_sum 5, 6
